@@ -294,7 +294,7 @@
     <p>Instale o xiaozhi-esp32-server num PC (o projeto recomenda 4 núcleos e 8 GB de memória) seguindo o README dele, que tem versão em português. Configure tudo local: voz para texto com FunASR ou Whisper, o modelo de linguagem pelo Ollama e uma voz sintética em português.</p>
 <pre><span class="c"># código do servidor (instalação: siga o README do projeto)</span>
 <span class="k">git clone</span> <span class="s">https://github.com/xinnan-tech/xiaozhi-esp32-server.git</span></pre>
-    <p>Atenção: a configuração "gratuita" que vem pronta no projeto usa serviços de nuvem para o modelo e para a voz. Para nada sair de casa, troque cada peça por uma local.</p>
+    <p>Atenção: a configuração "gratuita" que vem pronta no projeto usa serviços de nuvem para o modelo e para a voz. Para nada sair de casa, troque cada peça por uma local. E não use o servidor público de teste citado no README do projeto: ele recebe o áudio de quem se conecta.</p>
   </div></div>
   <div class="step"><div class="b">3</div><div>
     <h3>Regravar o firmware apontando para o seu servidor</h3>
