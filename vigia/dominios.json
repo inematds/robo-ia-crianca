@@ -1,0 +1,115 @@
+{
+  "_nota": "Final do nome → quem é e o país da EMPRESA (não onde o servidor fica). Lista curta e conservadora; o que não estiver aqui aparece como 'não identificado'. Corrija ou acrescente à vontade.",
+  "volces.com": {
+    "quem": "ByteDance / Volcengine (Doubao)",
+    "pais": "China"
+  },
+  "volcengine.com": {
+    "quem": "ByteDance / Volcengine (Doubao)",
+    "pais": "China"
+  },
+  "doubao.com": {
+    "quem": "ByteDance (Doubao)",
+    "pais": "China"
+  },
+  "bytedance.com": {
+    "quem": "ByteDance",
+    "pais": "China"
+  },
+  "deepseek.com": {
+    "quem": "DeepSeek",
+    "pais": "China"
+  },
+  "baidu.com": {
+    "quem": "Baidu (Wenxin / ERNIE)",
+    "pais": "China"
+  },
+  "bcebos.com": {
+    "quem": "Baidu Cloud",
+    "pais": "China"
+  },
+  "baidubce.com": {
+    "quem": "Baidu Cloud",
+    "pais": "China"
+  },
+  "aliyuncs.com": {
+    "quem": "Alibaba Cloud (Tongyi Qianwen)",
+    "pais": "China"
+  },
+  "aliyun.com": {
+    "quem": "Alibaba Cloud",
+    "pais": "China"
+  },
+  "alibabacloud.com": {
+    "quem": "Alibaba Cloud",
+    "pais": "China"
+  },
+  "tencent.com": {
+    "quem": "Tencent",
+    "pais": "China"
+  },
+  "qq.com": {
+    "quem": "Tencent",
+    "pais": "China"
+  },
+  "myqcloud.com": {
+    "quem": "Tencent Cloud",
+    "pais": "China"
+  },
+  "tenclass.net": {
+    "quem": "servidor público do XiaoZhi",
+    "pais": "China (provável)"
+  },
+  "xiaozhi.me": {
+    "quem": "XiaoZhi",
+    "pais": "China (provável)"
+  },
+  "tuya.com": {
+    "quem": "Tuya (nuvem de aparelhos inteligentes)",
+    "pais": "China"
+  },
+  "tuyacn.com": {
+    "quem": "Tuya",
+    "pais": "China"
+  },
+  "tuyaus.com": {
+    "quem": "Tuya (região EUA)",
+    "pais": "China"
+  },
+  "tuyaeu.com": {
+    "quem": "Tuya (região Europa)",
+    "pais": "China"
+  },
+  "espressif.com": {
+    "quem": "Espressif (fabricante do chip ESP32)",
+    "pais": "China"
+  },
+  "amazonaws.com": {
+    "quem": "Amazon Web Services (nuvem; o dono real pode ser qualquer empresa)",
+    "pais": "varia"
+  },
+  "cloudfront.net": {
+    "quem": "Amazon CloudFront",
+    "pais": "varia"
+  },
+  "googleapis.com": {
+    "quem": "Google",
+    "pais": "EUA"
+  },
+  "google.com": {
+    "quem": "Google",
+    "pais": "EUA"
+  },
+  "openai.com": {
+    "quem": "OpenAI",
+    "pais": "EUA"
+  },
+  "pool.ntp.org": {
+    "quem": "acerto do relógio (normal)",
+    "pais": "varia"
+  },
+  "ntp.org": {
+    "quem": "acerto do relógio (normal)",
+    "pais": "varia"
+  }
+}

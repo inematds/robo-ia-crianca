@@ -65,7 +65,7 @@
   .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:74px 22px}
   .hero h1{font-size:clamp(2.1rem,4.6vw,3.3rem);font-weight:800;letter-spacing:-.025em}
   .hero p.lead{font-size:1.18rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:38ch}
-  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero .cta,.cta{display:flex;gap:12px;flex-wrap:wrap}
   .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
   .hero figure img{width:100%;height:auto;display:block}
   .resumo{padding:38px 0 34px;border-bottom:1px solid var(--line)}
@@ -140,6 +140,9 @@
     <a class="sec" href="#riscos">Riesgos</a>
     <a class="sec" href="#checklist">Checklist</a>
     <a class="sec" href="#cerebro">Cerebro en casa</a>
+    <a class="sec" href="#educador">Educador</a>
+    <a class="sec" href="#vigia">Vigía</a>
+    <a class="sec" href="#roadmap">Roadmap</a>
     <span class="lang"><a href="../">PT</a><a href="../en/">EN</a><a class="on" href="./">ES</a></span>
     <button class="tgl" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">🌙</button>
     <a class="btn" href="https://github.com/inematds/robo-ia-crianca" target="_blank" rel="noopener">GitHub</a>
@@ -306,6 +309,67 @@
     <h3>Haz la prueba con el acceso a internet bloqueado</h3>
     <p>Bloquea en el router el acceso del robot a internet y deja solo la red de casa. Si sigue respondiendo en portugués, el cerebro realmente está en casa.</p>
   </div></div>
+</div></section>
+
+<section id="educador"><div class="wrap">
+  <span class="chip">Para docentes y educadores</span>
+  <h2>Kit del educador: "¿El robot te escucha?"</h2>
+  <p class="sub">Una clase de 30 minutos para niños de 6 a 12 años. No hace falta tener un robot ni internet, ni saber de IA. El tono es de curiosidad, no de miedo: los niños aprenden que ellos deciden qué cuentan.</p>
+  <div class="grid g2">
+    <div class="card"><h3>1. Inicio (5 min)</h3><p>"Cuando hablas con un robot, ¿adónde va tu voz?" El grupo responde y tú anotas en la pizarra, sin corregir todavía.</p></div>
+    <div class="card"><h3>2. Juego del cordón (10 min)</h3><p>Un niño es el robot y otro es la "empresa que está lejos", unidos por un cordón. La frase que se le dice al robot llega al otro lado del salón. Todos ven que la voz salió de allí.</p></div>
+    <div class="card"><h3>3. Las 3 preguntas (10 min)</h3><p>¿Habla español? ¿Funciona sin internet? ¿No tiene cámara? Leer el cartel y la hoja de actividad: dibujar el recorrido de la voz y marcar lo que no se debe contar.</p></div>
+    <div class="card"><h3>4. Acuerdos (5 min)</h3><p>Al robot no se le dicen el nombre completo, la escuela, la dirección ni la contraseña. El robot se queda fuera del dormitorio por la noche. ¿Una pregunta extraña? Llamar a un adulto. La nota va a casa.</p></div>
+  </div>
+  <div class="cta" style="margin-top:20px">
+    <a class="btn" href="../../kit-educador/es/imprimir.html" target="_blank" rel="noopener">Imprimir cartel, actividad y nota</a>
+    <a class="btn ghost" href="https://github.com/inematds/robo-ia-crianca/blob/main/kit-educador/es/aula.md" target="_blank" rel="noopener">Plan completo de la clase</a>
+  </div>
+</div></section>
+
+<section id="vigia"><div class="wrap">
+  <span class="chip">Para el padre o la madre a quien le gustan las computadoras</span>
+  <h2>Vigía de red: mira con quién se comunica el robot</h2>
+  <p class="sub">Un script que muestra adónde envía datos el robot, cuántos envía y en qué minutos, incluso cuando nadie está hablando con él. Funciona en una laptop con Linux, sin cuenta ni servicio externo. Quienes no tengan una pueden revisar la aplicación del router, que suele mostrar el consumo de datos por dispositivo.</p>
+  <div class="step"><div class="b">1</div><div>
+    <h3>La laptop se convierte en la Wi-Fi del robot</h3>
+    <p>El script activa una red llamada ROBO-VIGIA en la laptop. En la aplicación del robot, cambia su Wi-Fi a esa red: así todo el tráfico pasa por la laptop. Antes, conecta la laptop a internet <strong>por cable</strong> (la tarjeta Wi-Fi se convierte en la red del robot) e instala tcpdump (<code>sudo apt install tcpdump</code>).</p>
+<pre><span class="k">git clone</span> <span class="s">https://github.com/inematds/robo-ia-crianca.git</span>
+<span class="k">cd</span> robo-ia-crianca/vigia
+<span class="k">./hotspot.sh</span> --ligar
+<span class="k">./hotspot.sh</span> --clientes   <span class="c"># muestra la dirección del robot, ej.: 10.42.0.50</span></pre>
+  </div></div>
+  <div class="step"><div class="b">2</div><div>
+    <h3>Vigilar mientras el niño lo usa</h3>
+    <p>Déjalo funcionando durante el uso normal. Haz también la prueba del silencio: 10 minutos con el robot encendido y nadie hablando.</p>
+<pre><span class="k">sudo python3</span> vigia_robo.py --iface <span class="s">&lt;placa&gt;</span> --ip <span class="s">10.42.0.50</span> --saida relatorio.md</pre>
+  </div></div>
+  <div class="step"><div class="b">3</div><div>
+    <h3>Leer el informe</h3>
+    <p>La tabla muestra cada destino con su nombre, la empresa, el país de la empresa y cuánto se envió. El gráfico minuto a minuto muestra si envía datos por su cuenta. El vigía de red ve el recorrido y el tamaño, no el contenido: la voz viaja cifrada.</p>
+<pre><span class="c"># fragmento de informe de EJEMPLO (captura inventada, no es una medición de un robot)</span>
+| api.tenclass.net          | servidor público de XiaoZhi    | China (probable) | 145.7 KB |
+| ark.cn-beijing.volces.com | ByteDance / Volcengine (Doubao) | China            |   3.1 KB |
+| 198.51.100.77             | no identificado (dirección fija)| ?                |   2.3 KB |</pre>
+  </div></div>
+  <div class="alerta"><strong>Estado:</strong> probado con una captura de ejemplo inventada (7 pruebas en <code>vigia/teste.sh</code>). El hotspot y la captura en vivo con un robot real todavía se probarán con el Bean Bun. Detalles: <a href="https://github.com/inematds/robo-ia-crianca/blob/main/vigia/README.es.md" target="_blank" rel="noopener">vigia/</a>.</div>
+</div></section>
+
+<section id="roadmap"><div class="wrap">
+  <span class="chip">Próximos pasos</span>
+  <h2>Roadmap: control parental en el cerebro en casa</h2>
+  <p class="sub">Cuando la conversación pasa por el servidor de la familia (el cerebro en casa, arriba), los padres empiezan a controlarla. En un robot conectado a la nube del fabricante, nada de esto es posible. Está planificado, pero todavía no está construido: depende de que funcione el cerebro en casa.</p>
+  <div class="grid g2">
+    <div class="card"><h3>📜 Historial</h3><p>El texto de cada pregunta y respuesta, guardado solo en la computadora de casa.</p></div>
+    <div class="card"><h3>🌙 Horario permitido</h3><p>Fuera del horario, el robot responde: "ahora es hora de descansar".</p></div>
+    <div class="card"><h3>⏱️ Límite diario</h3><p>Minutos de conversación por día, como ya existe para las pantallas.</p></div>
+    <div class="card"><h3>🛡️ Filtro de temas</h3><p>Si el tema está bloqueado, aparece "pregúntale a un adulto".</p></div>
+    <div class="card"><h3>🔔 Alerta para los padres</h3><p>La dirección, la contraseña, la palabra "secreto" o la tristeza repetida generan una alerta en el celular.</p></div>
+    <div class="card"><h3>⏻ Botón de apagado</h3><p>Una página en el celular de los padres desconecta el cerebro con un toque.</p></div>
+    <div class="card"><h3>📊 Informe semanal</h3><p>Tiempo de uso, temas más hablados y alertas.</p></div>
+    <div class="card"><h3>🗑️ Borrar todo</h3><p>Un botón borra el historial. Los datos son de la familia.</p></div>
+  </div>
+  <p class="sub" style="margin-top:16px">Orden: comprar y abrir un Bean Bun → cerebro en casa con la red bloqueada → medir con el vigía de red que no salga nada → armar el panel, empezando por el historial. Roadmap completo: <a href="https://github.com/inematds/robo-ia-crianca/blob/main/ROADMAP.es.md" target="_blank" rel="noopener">ROADMAP.es.md</a>.</p>
 </div></section>
 
 <section id="compara"><div class="wrap">
