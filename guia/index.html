@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robô de IA para criança — o que saber antes de comprar</title>
+<meta name="description" content="Guia para pais e avós: o que são os robôs de IA baratos vendidos em marketplaces, para onde vão a voz e a imagem da criança, checklist antes de comprar, cuidados se já comprou e o caminho de um cérebro em casa.">
+<meta property="og:image" content="https://inematds.github.io/robo-ia-crianca/guia/assets/banner.jpg">
+<link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/robo-ia-crianca/guia/">
+<link rel="alternate" hreflang="en" href="https://inematds.github.io/robo-ia-crianca/guia/en/">
+<link rel="alternate" hreflang="es" href="https://inematds.github.io/robo-ia-crianca/guia/es/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#FACC15; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    --bad:#F0918A; --ok:#7CE0C6; --warn:#F2B45C;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#a16207; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    --bad:#A83426; --ok:#0E6B55; --warn:#8F520A;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  body.light pre .c{color:#8a8a98}
+  body.light .btn:not(.ghost){background:#FACC15}
+  body.light nav{background:rgba(246,247,249,.85)}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0}
+  a{color:var(--amb);text-decoration:none}
+  p a,li a,td a{text-decoration:underline;text-underline-offset:3px}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,12,16,.78);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb);white-space:nowrap}
+  nav .brand .emoji{font-size:1.25rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .inema:hover{filter:brightness(1.15)}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro:hover{filter:brightness(1.15)}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:18px;font-size:.9rem}
+  nav .links a.sec{color:var(--mut);white-space:nowrap} nav .links a.sec:hover{color:var(--txt)}
+  .lang{display:inline-flex;gap:2px;font-family:Sora;font-size:.78rem}
+  .lang a{color:var(--mut);padding:.2em .45em;border-radius:6px} .lang a.on{color:var(--amb);background:rgba(250,204,21,.12)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--amb);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  @media(max-width:1140px){nav .links a.sec{display:none}}
+  @media(max-width:520px){nav .wrap{gap:8px;padding:8px 14px;height:auto;flex-wrap:wrap} nav .links{gap:8px;margin-left:0;width:100%;justify-content:space-between} nav .btn{padding:.45em .7em;font-size:.82rem} .tgl{width:34px;height:34px}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(250,204,21,.16),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:74px 22px}
+  .hero h1{font-size:clamp(2.1rem,4.6vw,3.3rem);font-weight:800;letter-spacing:-.025em}
+  .hero p.lead{font-size:1.18rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:38ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;height:auto;display:block}
+  .resumo{padding:38px 0 34px;border-bottom:1px solid var(--line)}
+  .resumo p{font-size:1.12rem;line-height:1.7;max-width:74ch;margin:.55em 0 0}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding:48px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:66ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0}
+  .card h3{font-size:1.05rem;margin-bottom:.4em}
+  .card p{color:var(--mut);font-size:.95rem;margin:0}
+  .card ul{color:var(--mut);font-size:.95rem;margin:.4em 0 0;padding-left:1.1em}
+  .card li{margin:.25em 0}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.88rem;font-family:Sora;font-weight:600}
+  .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0}
+  pre .c{color:#6f6f7c} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
+  .step{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px;margin-bottom:26px}
+  .step>div{min-width:0}
+  p code,li code,td code{overflow-wrap:anywhere}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--amb);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  body.light .step .b{background:#FACC15}
+  .step h3{font-size:1.12rem;margin-bottom:.3em}
+  .step p{color:var(--mut);margin:.2em 0 .7em}
+  .phase{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border:none}
+  .phase .tag{flex:0 0 92px;font-family:Sora;font-weight:800;color:var(--amb)}
+  .phase .d strong{display:block;margin-bottom:.2em}
+  .phase .d span{color:var(--mut);font-size:.95rem}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:4px}
+  /* selos de certeza: sempre com rótulo escrito, nunca só cor */
+  .tag-c{display:inline-block;font-family:Sora;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid currentColor;border-radius:999px;padding:.1em .6em;margin-right:.4em;vertical-align:middle}
+  .t-ok{color:var(--ok)} .t-prov{color:var(--warn)} .t-test{color:var(--sky)}
+  .alerta{border-left:3px solid var(--bad);background:var(--card);border-radius:0 14px 14px 0;padding:16px 20px;margin:0 0 22px;max-width:74ch}
+  .alerta strong{color:var(--bad)}
+  .nota{border-left:3px solid var(--amb);background:var(--card);border-radius:0 14px 14px 0;padding:16px 20px;margin:22px 0 0;max-width:74ch;color:var(--mut)}
+  .nota strong{color:var(--txt)}
+  .check{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+  .check li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px 12px 46px;position:relative}
+  .check li::before{content:"";position:absolute;left:16px;top:15px;width:16px;height:16px;border:2px solid var(--amb);border-radius:4px}
+  .check li b{display:block;font-family:Sora}
+  .check li span{color:var(--mut);font-size:.95rem}
+  .tblw{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
+  table{border-collapse:collapse;width:100%;min-width:640px;font-size:.95rem}
+  th,td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+  thead th{font-family:Sora;font-size:.9rem;background:var(--bg2)}
+  tbody th{font-family:Sora;font-weight:600;color:var(--mut);width:18%}
+  tr:last-child td,tr:last-child th{border-bottom:none}
+  td.lc{color:var(--txt)}
+  .fonte{font-size:.88rem;color:var(--mut);margin-top:14px;max-width:80ch}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top"><span class="emoji">🤖</span> Robô de IA</a>
+  <span class="sep">|</span>
+  <span class="clubpro">
+    <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
+    <span class="sep">-</span>
+    <a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a>
+  </span>
+  <div class="links">
+    <a class="sec" href="#oque">O que é</a>
+    <a class="sec" href="#fluxo">Como funciona</a>
+    <a class="sec" href="#riscos">Riscos</a>
+    <a class="sec" href="#checklist">Checklist</a>
+    <a class="sec" href="#cerebro">Cérebro em casa</a>
+    <span class="lang"><a class="on" href="./">PT</a><a href="en/">EN</a><a href="es/">ES</a></span>
+    <button class="tgl" id="themeToggle" aria-label="Alternar tema" title="Alternar tema">🌙</button>
+    <a class="btn" href="https://github.com/inematds/robo-ia-crianca" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div>
+      <span class="chip">Guia para pais e avós</span>
+      <h1>Robô de IA para criança: leia antes de <span class="amb">comprar</span></h1>
+      <p class="lead">Ele parece um brinquedo. Por dentro, é um microfone ligado à internet que manda a voz do seu filho para um servidor do outro lado do mundo.</p>
+      <div class="cta">
+        <a class="btn" href="#checklist">Ver o checklist</a>
+        <a class="btn ghost" href="#riscos">Por que ter cuidado</a>
+      </div>
+    </div>
+    <figure><img src="assets/banner.jpg" alt="Banner: Antes de comprar — robô de IA para criança"></figure>
+  </div>
+</header>
+
+<section id="resumo" class="resumo"><div class="wrap">
+  <span class="chip">Em resumo</span>
+  <p>Este guia explica os robôs de IA baratos para criança que aparecem nos marketplaces brasileiros. Eles não têm inteligência dentro: gravam a voz (e, em alguns modelos, a imagem) e mandam pela internet para serviços de IA na China, que respondem em voz. Aqui você vê os riscos, um checklist para usar antes de comprar, os cuidados se já comprou e um caminho, ainda a testar, para que o "cérebro" rode no seu próprio computador. Não precisa saber nada de tecnologia: é só ler.</p>
+  <div class="nota"><strong>Para quem tem pressa:</strong> criança sozinha com o robô ligado à internet, não recomendamos. Com um adulto junto, por pouco tempo, para treinar inglês, dá, seguindo os <a href="#comprou">sete cuidados</a>.</div>
+</div></section>
+
+<section id="oque"><div class="wrap">
+  <span class="chip">O que é</span>
+  <h2>Dois tipos de robô que estão nos anúncios</h2>
+  <p class="sub">Levantamos em 07/11/2026 anúncios de robôs de IA infantis num grande marketplace brasileiro. Apareceram dois tipos. O que segue é o que os próprios anúncios dizem.</p>
+  <figure style="margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="assets/banner-grade.jpg" alt="Banner: os pontos que o guia cobre — idioma, câmera e microfone, dados, checklist, se já comprou, cérebro em casa" loading="lazy" style="width:100%;display:block"></figure>
+  <div class="grid g2">
+    <div class="card"><h3>🤖 Robô "mecha" (vermelho e amarelo)</h3>
+      <p>Visual de robô de desenho, com fone de ouvido e olhos de LED. A arte do anúncio, em inglês, promete "conversa com IA para crianças de 3 a 12 anos", em mandarim, inglês e cantonês, com "acesso a 4 grandes modelos de IA": Doubao, DeepSeek, Wenxin (Baidu) e Tongyi Qianwen (Alibaba). E traz a etiqueta "Overseas Version".</p>
+      <ul>
+        <li>Conversa contínua, enciclopédia, luz nos olhos.</li>
+        <li>Vários "papéis": tutor de matemática, de literatura, de ciência.</li>
+        <li>Caixa de som Bluetooth e tradução bilíngue.</li>
+        <li>Lembretes: "dormir às 22h", "beber água em 10 minutos", "dever de casa às 14h".</li>
+        <li>Pode ser interrompido enquanto fala.</li>
+        <li>Uma versão vermelha, quadrada, tem <strong>câmera na barriga</strong>.</li>
+      </ul>
+    </div>
+    <div class="card"><h3>🫘 "Bean Bun" (robozinho de mesa)</h3>
+      <p>Pequeno, em formato de saquinho de feijão. O anúncio diz que é "alimentado pelo motor DeepSeek AI com visão de máquina": você mostra um objeto e ele diz o que é e explica.</p>
+      <ul>
+        <li>Conversa por voz.</li>
+        <li>Conta histórias e explica ciência para criança.</li>
+        <li>Tem câmera (é ela que faz a "visão de máquina").</li>
+      </ul>
+    </div>
+  </div>
+  <div class="nota"><strong>Um sinal que vale notar:</strong> o texto em português dos anúncios é tradução automática ruim ("Voz Real Interrupto", "Espaçamento"). Isso indica que o produto não foi adaptado ao Brasil: foi só colocado à venda aqui.</div>
+</div></section>
+
+<section id="fluxo"><div class="wrap">
+  <span class="chip">Como funciona</span>
+  <h2>A IA não está no brinquedo. Está na nuvem.</h2>
+  <p class="sub">Separamos o que é provável (o que o hardware e os anúncios indicam) do que está confirmado (projetos públicos que dá para conferir). Ainda não abrimos nenhum desses robôs.</p>
+  <div class="flow" aria-label="Caminho da conversa">
+    <span>Criança fala</span><span class="arr">→</span>
+    <span>Microfone (e câmera) gravam</span><span class="arr">→</span>
+    <span>Wi-Fi da sua casa</span><span class="arr">→</span>
+    <span>Servidor na nuvem (China)</span><span class="arr">→</span>
+    <span>Doubao, DeepSeek…</span><span class="arr">→</span>
+    <span>Resposta volta em voz</span>
+  </div>
+  <div class="grid g2" style="margin-top:26px">
+    <div class="card"><h3><span class="tag-c t-prov">Provável</span>O que tem dentro</h3>
+      <p>Uma plaquinha do tipo ESP32-S3 com microfone, alto-falante e uma telinha que faz os "olhos", rodando o ecossistema aberto chamado <strong>XiaoZhi</strong>. A placa só grava, envia e toca a resposta. Placas desse tipo são vendidas avulsas por US$ 8 a 18 (exemplo: <a href="https://spotpear.com/shop/ESP32-S3-AI-BOX-deepseek-xiaozhi-doubao-0.71inch-LCD-Electronic-Eye-Toy-Doll-Robot/AI-BOX.html" target="_blank" rel="noopener">SpotPear AI-BOX</a>). Só confirmamos abrindo o robô.</p></div>
+    <div class="card"><h3><span class="tag-c t-ok">Confirmado</span>Dá para trocar o cérebro</h3>
+      <p>Existe um servidor aberto, o <a href="https://github.com/xinnan-tech/xiaozhi-esp32-server" target="_blank" rel="noopener">xiaozhi-esp32-server</a> (licença MIT), que você instala em casa. Ele aceita modelos locais pelo Ollama, reconhecimento de voz local (FunASR, Sherpa) e várias vozes sintéticas. Há também o <a href="https://github.com/akdeb/OpenToys" target="_blank" rel="noopener">OpenToys</a>, com ESP32-S3 e Whisper rodando no computador (foco em Mac com chip Apple).</p></div>
+  </div>
+  <p class="fonte">Doubao é da ByteDance, a dona do TikTok. Wenxin é da Baidu e Tongyi Qianwen, da Alibaba.</p>
+</div></section>
+
+<section id="riscos"><div class="wrap">
+  <span class="chip">Riscos</span>
+  <h2>Por que não dar como está para uma criança brasileira</h2>
+  <p class="sub">Não é para entrar em pânico. É para saber o que você está colocando no quarto do seu filho.</p>
+  <div class="grid g2">
+    <div class="card"><h3>🗣️ Não fala português</h3><p>O anúncio do robô "mecha" cita só mandarim, inglês e cantonês; o do Bean Bun não diz o idioma. Para uma criança que ainda está aprendendo a falar, isso limita muito o uso e aumenta a chance de mal-entendido.</p></div>
+    <div class="card"><h3>📡 Voz e imagem saem de casa</h3><p>A voz da criança vai para servidores na China. Nos modelos com câmera, podem ir também imagens de dentro de casa e do rosto dela. Não há política de privacidade clara em português, então você não sabe por quanto tempo isso fica guardado, se é usado para treinar a IA nem quem pode acessar. No Brasil, dados de criança têm proteção especial na LGPD (a lei de proteção de dados) e no ECA (Estatuto da Criança e do Adolescente).</p></div>
+    <div class="card"><h3>🔌 Depende de app e nuvem de fora</h3><p>Se o serviço mudar, cobrar ou desligar, o robô vira peso de papel. Você não controla nada disso.</p></div>
+    <div class="card"><h3>⚠️ Respostas sem filtro para criança</h3><p>Os modelos de IA por trás não foram feitos para criança brasileira. Não sabemos que filtros o fabricante aplica, se aplica algum.</p></div>
+  </div>
+  <h3 style="margin:34px 0 12px;font-size:1.15rem">O que as pesquisas já mostraram sobre brinquedos de IA</h3>
+  <div class="grid g3">
+    <div class="card"><h3>7 de 10</h3><p>apps de brinquedos de IA analisados tinham rastreadores de terceiros e pediam permissões além do necessário (Cybernews).</p></div>
+    <div class="card"><h3>1.500+</h3><p>empresas de brinquedos de IA registradas na China até outubro de 2025, e testes com respostas inseguras para criança (WIRED).</p></div>
+    <div class="card"><h3>Leia antes</h3><p>A Mozilla, no guia "Privacy Not Included", recomenda ler a política de privacidade de qualquer aparelho conectado antes de comprar.</p></div>
+  </div>
+  <p class="fonte">Fontes: reportagem da Cybernews sobre apps de brinquedos de IA, reportagem da WIRED sobre brinquedos de IA na China (dado até outubro de 2025) e o guia "Privacy Not Included" da Mozilla. Para conferir, busque o nome da fonte junto com "AI toys".</p>
+</div></section>
+
+<section id="uso"><div class="wrap">
+  <span class="chip">Para que pode servir</span>
+  <h2>Tem uso, sim, com um adulto junto</h2>
+  <p class="sub">O problema não é o objeto. É deixar a criança sozinha com ele, ligado à internet, sem saber para onde vão os dados.</p>
+  <div class="grid g2">
+    <div class="card"><h3>🇬🇧 Treino de inglês com supervisão</h3><p>Como ele fala inglês, pode ser um parceiro de conversa para praticar, com um adulto ao lado e por pouco tempo.</p></div>
+    <div class="card"><h3>🔧 Projeto maker com adulto</h3><p>Abrir, entender a placa e trocar o cérebro por um que roda em casa é um ótimo projeto de eletrônica e IA para fazer junto com um adolescente.</p></div>
+  </div>
+</div></section>
+
+<section id="checklist"><div class="wrap">
+  <span class="chip">Checklist antes de comprar</span>
+  <h2>Pergunte ao vendedor (ou procure no anúncio)</h2>
+  <p class="sub">Se o vendedor não souber responder, isso já é uma resposta. Versão para imprimir: <a href="https://github.com/inematds/robo-ia-crianca/blob/main/docs/checklist.md" target="_blank" rel="noopener">docs/checklist.md</a>.</p>
+  <ul class="check">
+    <li><b>Fala português?</b><span>Não basta "suporta vários idiomas". Peça a lista.</span></li>
+    <li><b>Qual aplicativo ele usa?</b><span>Procure o app na loja e leia as avaliações e as permissões que ele pede.</span></li>
+    <li><b>Exige conta ou número de telefone chinês?</b><span>Se exigir, você depende de um serviço que não controla.</span></li>
+    <li><b>Tem câmera?</b><span>Se tiver, ela pode mandar imagens de dentro da sua casa.</span></li>
+    <li><b>Tem botão físico para desligar o microfone?</b><span>Botão de verdade, não só no app.</span></li>
+    <li><b>Onde ficam os dados? Tem política de privacidade?</b><span>Em português, com quem guarda, por quanto tempo e como apagar.</span></li>
+    <li><b>Funciona sem internet?</b><span>Se não funciona, tudo o que a criança diz passa pela nuvem.</span></li>
+    <li><b>Recebe atualização?</b><span>Aparelho conectado sem atualização fica vulnerável com o tempo.</span></li>
+    <li><b>Tem controle dos pais?</b><span>Limite de tempo, histórico de conversas, filtro de assunto.</span></li>
+  </ul>
+</div></section>
+
+<section id="comprou"><div class="wrap">
+  <span class="chip">Se já comprou</span>
+  <h2>Sete cuidados para usar com mais segurança</h2>
+  <p class="sub">Nenhum deles exige conhecimento técnico.</p>
+  <div class="grid g2">
+    <div class="card"><h3>1. Rede de convidados</h3><p>Ligue o robô na rede Wi-Fi de convidados do roteador, separada dos seus computadores e celulares. Procure "Rede de convidados" ou "Guest" no aplicativo ou na página do roteador; se não achar, peça para a operadora de internet ativar.</p></div>
+    <div class="card"><h3>2. Câmera tapada</h3><p>Se tiver câmera, tape com um pedaço de fita isolante preta ou desligue nas configurações.</p></div>
+    <div class="card"><h3>3. Fora do quarto à noite</h3><p>Não deixe o robô no quarto da criança na hora de dormir.</p></div>
+    <div class="card"><h3>4. Adulto por perto</h3><p>Use só com um adulto no mesmo ambiente.</p></div>
+    <div class="card"><h3>5. Nada de dados pessoais</h3><p>Ensine a criança a não dizer nome completo, escola nem endereço para o robô.</p></div>
+    <div class="card"><h3>6. Permissões do app</h3><p>No celular, confira o que o app pode acessar (localização, contatos, fotos) e tire o que não for necessário.</p></div>
+    <div class="card"><h3>7. Da tomada</h3><p>Quando não estiver em uso, desligue da tomada ou tire a bateria.</p></div>
+  </div>
+</div></section>
+
+<section id="cerebro"><div class="wrap">
+  <span class="chip">Caminho do maker</span>
+  <h2>Cérebro em casa: o robô fala português e nada sai da sua rede</h2>
+  <div class="alerta"><strong>Roteiro a testar.</strong> O INEMA ainda não testou este caminho. Vamos comprar um Bean Bun para abrir e testar, e este guia será atualizado com o resultado. Abrir e regravar o aparelho pode estragá-lo e acaba com a garantia.</div>
+  <p class="sub">Esta parte é para adolescente ou adulto com alguma experiência em eletrônica; se não é o seu caso, pode pular. A ideia: manter o corpo barato do robô e trocar o cérebro da nuvem por um que roda num computador da sua casa. Roteiro técnico completo: <a href="https://github.com/inematds/robo-ia-crianca/blob/main/docs/cerebro-local.md" target="_blank" rel="noopener">docs/cerebro-local.md</a>.</p>
+
+  <div class="step"><div class="b">1</div><div>
+    <h3>Abrir e confirmar a placa</h3>
+    <p>Tire os parafusos (alguns modelos são colados ou de encaixe), abra com cuidado e procure a inscrição "ESP32-S3" no chip metálico da placa. Fotografe a placa. Se for outro chip, este roteiro não serve.</p>
+  </div></div>
+  <div class="step"><div class="b">2</div><div>
+    <h3>Montar o servidor em casa</h3>
+    <p>Instale o xiaozhi-esp32-server num PC (o projeto recomenda 4 núcleos e 8 GB de memória) seguindo o README dele, que tem versão em português. Configure tudo local: voz para texto com FunASR ou Whisper, o modelo de linguagem pelo Ollama e uma voz sintética em português.</p>
+<pre><span class="c"># código do servidor (instalação: siga o README do projeto)</span>
+<span class="k">git clone</span> <span class="s">https://github.com/xinnan-tech/xiaozhi-esp32-server.git</span></pre>
+    <p>Atenção: a configuração "gratuita" que vem pronta no projeto usa serviços de nuvem para o modelo e para a voz. Para nada sair de casa, troque cada peça por uma local.</p>
+  </div></div>
+  <div class="step"><div class="b">3</div><div>
+    <h3>Regravar o firmware apontando para o seu servidor</h3>
+    <p>Ligar a placa no PC pelo cabo USB, guardar uma cópia do programa original e gravar o firmware XiaoZhi configurado com o endereço do seu servidor, em vez do servidor do fabricante. Como gravar e onde pôr o endereço está no README do firmware; os detalhes que formos descobrindo no teste vão para o roteiro técnico.</p>
+<pre><span class="c"># firmware aberto do ecossistema XiaoZhi</span>
+<span class="k">git clone</span> <span class="s">https://github.com/78/xiaozhi-esp32.git</span></pre>
+  </div></div>
+  <div class="step"><div class="b">4</div><div>
+    <h3>Testar com a rede bloqueada</h3>
+    <p>Bloqueie no roteador o acesso do robô à internet, deixando só a rede de casa. Se ele continuar respondendo em português, o cérebro está mesmo em casa.</p>
+  </div></div>
+</div></section>
+
+<section id="compara"><div class="wrap">
+  <span class="chip">Comparação</span>
+  <h2>Mecha × Bean Bun × robô com cérebro local</h2>
+  <p class="sub">Só o que os anúncios e os projetos dizem. Não temos o preço em reais desses robôs, então não colocamos. No celular, arraste a tabela para o lado.</p>
+  <div class="tblw"><table>
+    <thead><tr><th></th><th>Robô "mecha"</th><th>Bean Bun</th><th>Robô com cérebro local</th></tr></thead>
+    <tbody>
+      <tr><th>Idioma</th><td class="lc">Mandarim, inglês, cantonês</td><td class="lc">Não informado no anúncio</td><td class="lc">Português, se o roteiro funcionar (a testar)</td></tr>
+      <tr><th>Câmera</th><td class="lc">Só na versão vermelha quadrada</td><td class="lc">Sim ("visão de máquina")</td><td class="lc">Depende da placa; você decide se usa</td></tr>
+      <tr><th>Para onde vão os dados</th><td class="lc">Nuvem de serviços chineses (Doubao, DeepSeek e outros)</td><td class="lc">Nuvem (motor DeepSeek)</td><td class="lc">Ficam no computador da sua casa</td></tr>
+      <tr><th>Precisa de internet</th><td class="lc">Sim</td><td class="lc">Sim</td><td class="lc">Não; só a rede Wi-Fi de casa</td></tr>
+      <tr><th>Custo</th><td class="lc">Barato (preço não confirmado)</td><td class="lc">Barato (preço não confirmado)</td><td class="lc">O robô + um computador que você já tenha; placas avulsas de US$ 8 a 18</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="tendencia"><div class="wrap">
+  <span class="chip">A tendência maior</span>
+  <h2>O aparelho ficou barato. O valor está no cérebro.</h2>
+  <p class="sub">O robô é a ponta de um movimento maior: o hardware virou peça barata, e o que vale é quem processa e guarda o que você diz.</p>
+  <div class="grid g3">
+    <div class="card"><h3>🎙️ Gravadores de IA</h3><p>Plaud NotePin S e Plaud One, com agente por voz: gravam e mandam para a nuvem resumir.</p></div>
+    <div class="card"><h3>🏢 Compras das big techs</h3><p>A Amazon comprou a Bee. A Meta comprou a Limitless em dezembro de 2025.</p></div>
+    <div class="card"><h3>💍 Novos formatos</h3><p>O anel Stream, da Sandbar, e o aparelho sem tela da OpenAI com Jony Ive, adiado para 2027.</p></div>
+  </div>
+  <p class="fonte">Lançamentos e compras noticiados entre 2025 e novembro de 2026.</p>
+  <div class="nota"><strong>A regra que vale para todos:</strong> quem controla o cérebro controla os dados. No robô do seu filho, isso não é diferente.</div>
+</div></section>
+
+<section id="glossario"><div class="wrap">
+  <span class="chip">Palavras deste guia</span>
+  <h2>Glossário rápido</h2>
+  <div class="grid g3" style="margin-top:22px">
+    <div class="card"><h3>Nuvem</h3><p>Computadores de uma empresa, em outro lugar, que recebem e processam o que o aparelho manda pela internet.</p></div>
+    <div class="card"><h3>Placa ESP32-S3</h3><p>Um chip barato com Wi-Fi, usado em muitos aparelhos conectados. É o "corpo eletrônico" provável desses robôs.</p></div>
+    <div class="card"><h3>Firmware</h3><p>O programa gravado dentro da placa. Ele decide para qual servidor o robô manda a voz.</p></div>
+    <div class="card"><h3>Servidor</h3><p>O computador que recebe a voz e devolve a resposta. Pode ser da empresa (na nuvem) ou seu (em casa).</p></div>
+    <div class="card"><h3>Ollama</h3><p>Programa gratuito que roda modelos de IA no seu próprio computador, sem internet.</p></div>
+    <div class="card"><h3>FunASR, Sherpa, Whisper</h3><p>Programas que transformam fala em texto. Rodam no computador de casa.</p></div>
+    <div class="card"><h3>Voz sintética (TTS)</h3><p>Programa que transforma texto em fala: é a "voz" do robô.</p></div>
+    <div class="card"><h3>Licença MIT</h3><p>Licença de código aberto: qualquer um pode usar, estudar e modificar.</p></div>
+    <div class="card"><h3>Maker</h3><p>Quem gosta de montar, abrir e modificar aparelhos por conta própria.</p></div>
+  </div>
+</div></section>
+
+<footer>
+  <div class="wrap">
+    <div class="pill">Privacidade</div><div class="pill">LGPD e ECA</div><div class="pill">ESP32-S3</div><div class="pill">IA local</div>
+    <p style="margin-top:18px">Robô de IA para criança · guia atualizado em 07/11/2026 ·
+      <a href="https://github.com/inematds/robo-ia-crianca">inematds/robo-ia-crianca</a> ·
+      <a href="https://inema.club">INEMA.CLUB</a></p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var KEY='robo-ia-crianca-theme';
+    var b=document.body, t=document.getElementById('themeToggle');
+    try{ if(localStorage.getItem(KEY)==='light'){ b.classList.add('light'); t.textContent='☀️'; } }catch(e){}
+    t.addEventListener('click',function(){
+      var light=b.classList.toggle('light');
+      t.textContent=light?'☀️':'🌙';
+      try{ localStorage.setItem(KEY, light?'light':'dark'); }catch(e){}
+    });
+  })();
+</script>
+</body>
+</html>
