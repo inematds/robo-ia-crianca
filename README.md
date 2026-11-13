@@ -12,6 +12,8 @@ Este guia explica os robôs de IA baratos para criança que aparecem nos marketp
 
 Guia completo (landing + passo a passo): **https://inematds.github.io/robo-ia-crianca/guia/**
 
+🎬 Vídeo: https://www.youtube.com/shorts/2td4u5iq3MU
+
 ## O que tem no repositório
 
 | Arquivo | Para quê |

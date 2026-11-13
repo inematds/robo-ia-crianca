@@ -12,6 +12,8 @@ This guide explains the low-cost AI robots for kids sold on Brazilian marketplac
 
 Complete guide (landing page + step-by-step instructions): **https://inematds.github.io/robo-ia-crianca/guia/en/**
 
+🎬 Video: https://www.youtube.com/shorts/2td4u5iq3MU
+
 ## What’s in the repository
 
 | File | What it’s for |

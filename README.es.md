@@ -12,6 +12,8 @@ Esta guía explica cómo son los robots de IA baratos para niños que aparecen e
 
 Guía completa (página de presentación + paso a paso): **https://inematds.github.io/robo-ia-crianca/guia/es/**
 
+🎬 Video: https://www.youtube.com/shorts/2td4u5iq3MU
+
 ## Qué hay en el repositorio
 
 | Archivo | Para qué sirve |
